@@ -1,0 +1,11 @@
+# Menggunakan image Python ringan
+FROM python:3.10-slim
+
+# Menentukan working directory di dalam container
+WORKDIR /app
+
+# Menyalin file main.py ke dalam container
+COPY app/main.py .
+
+# Menjalankan file main.py saat container dijalankan
+CMD ["python", "main.py"]
